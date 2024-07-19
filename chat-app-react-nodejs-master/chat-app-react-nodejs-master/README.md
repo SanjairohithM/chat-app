@@ -1,51 +1,68 @@
-Requirements:
-
-Python 3.x
-tkinter
-customtkinter
-torch
-numpy
-opencv-python
-Pillow
-pygame
-
-Installation:
-1:Clone the repository:
-
-git clone https://github.com/SanjairohithM/Drowsiness-detection.git
-
-2.Navigate to the project directory:
-cd drowsiness-detection
-
-3.Install the required packages:
-pip install -r requirements.txt
-
-Usage:
-
-1.Ensure you have a working webcam connected to your system.
-
-2.Place the YOLOv5 model weights (last.pt) in the appropriate directory (yolov5/runs/train/exp9/weights/).
-
-3.Place your audio files (1.wav, 2.wav, 3.wav) in the root directory of the project.
-
-4.Run the application:
-python drowsiness_detection.py
-
-Import Libraries:
-import tkinter as tk
-import customtkinter as ctk
-import torch
-import numpy as np
-import cv2
-from PIL import Image, ImageTk
-import pygame.mixer
-import random
-
-Contributing
-Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+# Snappy - Chat Application 
+Snappy is chat application build with the power of MERN Stack. You can find the tutorial [here](https://www.youtube.com/watch?v=otaQKODEUFs)
 
 
+![login page](./images/snappy_login.png)
 
+![home page](./images/snappy.png)
 
-License
-This project is licensed under the MIT License.
+## Installation Guide
+
+### Requirements
+- [Nodejs](https://nodejs.org/en/download)
+- [Mongodb](https://www.mongodb.com/docs/manual/administration/install-community/)
+
+Both should be installed and make sure mongodb is running.
+### Installation
+
+#### First Method
+```shell
+git clone https://github.com/SanjairohithM/chat-app
+cd chat-app-react-nodejs
+```
+Now rename env files from .env.example to .env
+```shell
+cd public
+mv .env.example .env
+cd ..
+cd server
+mv .env.example .env
+cd ..
+```
+
+Now install the dependencies
+```shell
+cd server
+yarn
+cd ..
+cd public
+yarn
+```
+We are almost done, Now just start the development server.
+
+For Frontend.
+```shell
+cd public
+yarn start
+```
+For Backend.
+
+Open another terminal in folder, Also make sure mongodb is running in background.
+```shell
+cd server
+yarn start
+```
+Done! Now open localhost:3000 in your browser.
+
+#### Second Method
+- This method requires docker and docker-compose to be installed in your system.
+- Make sure you are in the root of your project and run the following command.
+
+```shell
+docker compose build --no-cache
+```
+after the build is complete run the containers using the following command
+```shell
+docker compose up
+```
+now open localhost:3000 in your browser.
